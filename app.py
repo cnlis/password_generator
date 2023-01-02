@@ -15,6 +15,7 @@ class PasswordGenerator(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.connect_slider_to_spinbox()
+        self.ui.spinbox_length.setValue(self.ui.slider_length.value())
         self.set_password()
 
         for btn in buttons.GENERATE_PASSWORD:
